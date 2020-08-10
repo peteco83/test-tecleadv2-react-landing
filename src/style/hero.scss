@@ -2,7 +2,6 @@
   position: absolute;
   top: 0;
 
-
   img {
     width: 100vw;
     height: 80vh;
@@ -20,7 +19,6 @@
     h1 {
       margin: 0;
     }
-
   }
 
   [class*="--fixed"] {
@@ -30,7 +28,7 @@
     width: 50%;
   }
 
-  [class*="--absolute"] {
+  [class*="--relative"] {
     position: relative;
     color: black;
   }

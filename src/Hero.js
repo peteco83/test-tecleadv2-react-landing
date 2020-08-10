@@ -26,19 +26,13 @@ export default class Hero extends Component {
       } else {
         this.setState({ statementScroll: false });
       }
-      console.log(
-        "STATEMENT",
-        statementComponentBottomPosition,
-        "ABOUT",
-        aboutComponentBottomPosition,
-        this.statementRef.current.getBoundingClientRect()
-      );
     });
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll");
-  }
+  // https://reactjs.org/docs/react-component.html#unsafe_componentwillmount
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll");
+  // }
 
   render() {
     return (
@@ -50,7 +44,7 @@ export default class Hero extends Component {
               ref={this.statementRef}
               className={
                 this.state.statementScroll
-                  ? `hero__statement--absolute`
+                  ? `hero__statement--relative`
                   : `hero__statement--fixed`
               }
             >
