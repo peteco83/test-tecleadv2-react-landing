@@ -1,0 +1,35 @@
+.hero {
+  position: relative;
+
+  img {
+    width: 100vw;
+    height: 80vh;
+    z-index: 0;
+  }
+
+  .statement-active {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    // background-color: rgba(56, 37, 37, 0.9);
+    top: 50%;
+    z-index: 1;
+    transition: ease-in-out 1s;
+  }
+
+  .statement-passive {
+    position: absolute;
+    color: blue;
+    height: 100px;
+    width: 100%;
+    // background-color: rgba(56, 37, 37, 0.9);
+    bottom: -100px;
+    z-index: 1;
+    transition: ease-in-out 1s;
+
+  }
+}
+
+p {
+  margin-top: 100px;
+}
