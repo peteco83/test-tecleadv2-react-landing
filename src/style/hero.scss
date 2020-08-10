@@ -1,35 +1,47 @@
 .hero {
-  position: relative;
+  position: absolute;
+  top: 0;
+
 
   img {
     width: 100vw;
     height: 80vh;
-    z-index: 0;
+    z-index: 10;
   }
 
-  .statement-active {
+  &__container {
+    width: 50%;
+  }
+
+  [class*="__statement"] {
+    transition: ease-in-out .2s;
+    z-index: 1;
+
+    h1 {
+      margin: 0;
+    }
+
+  }
+
+  [class*="--fixed"] {
     position: fixed;
-    height: 100px;
-    width: 100%;
-    // background-color: rgba(56, 37, 37, 0.9);
     top: 50%;
-    z-index: 1;
-    transition: ease-in-out 1s;
+    color: white;
+    width: 50%;
   }
 
-  .statement-passive {
-    position: absolute;
-    color: blue;
-    height: 100px;
-    width: 100%;
-    // background-color: rgba(56, 37, 37, 0.9);
-    bottom: -100px;
-    z-index: 1;
-    transition: ease-in-out 1s;
-
+  [class*="--absolute"] {
+    position: relative;
+    color: black;
   }
-}
 
-p {
-  margin-top: 100px;
+  &__about {
+    margin-top: 100px;
+    margin-bottom: 2000px;
+
+    &__text {
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
 }
